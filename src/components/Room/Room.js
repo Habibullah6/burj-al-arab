@@ -1,18 +1,18 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
+import IconButton from '@material-ui/core/IconButton';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import LocalHotelIcon from '@material-ui/icons/LocalHotel';
 import WcIcon from '@material-ui/icons/Wc';
-import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -77,7 +77,7 @@ export default function Room({room}){
           <AttachMoneyIcon />: {room.price} 
         </IconButton>
         <Button onClick={() => handleBook(room.bedType)} variant="contained" color="primary">
-            Book
+            book
         </Button>
       </CardActions>
     </Card>
